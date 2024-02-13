@@ -4,6 +4,7 @@ on:
     paths:
       - 'services/tasks_api/**'
       - '.github/workflows/api.yml'
+
 jobs:
   code-quality:
     strategy:
