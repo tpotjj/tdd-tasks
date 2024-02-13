@@ -4,7 +4,6 @@ on:
     paths:
       - 'services/tasks_api/**'
       - '.github/workflows/api.yml'
-
 jobs:
   test:
     strategy:
