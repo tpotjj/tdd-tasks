@@ -12,6 +12,10 @@ provider:
   environment:
     APP_ENVIRONMENT: ${self:provider.stage}
 
+package:
+  exclude:
+    - node_modules/**
+    
 functions:
   API:
     handler: main.handle
