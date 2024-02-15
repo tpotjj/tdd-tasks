@@ -15,6 +15,8 @@ httptools = "^0.6.1"
 mangum = "^0.17.0"
 boto3 = "^1.34.41"
 moto = "4.2.14"
+pyjwt = "^2.8.0"
+pydantic-settings = "^2.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
