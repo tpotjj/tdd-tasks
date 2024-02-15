@@ -14,7 +14,6 @@ class TaskStore:
 
     def add(self, task):
         dynamodb = boto3.resource("dynamodb", endpoint_url=self.dynamodb_url)
-        dynamodb = boto3.resource("dynamodb")
         table = dynamodb.Table(self.table_name)
         table.put_item(
             Item={
@@ -31,7 +30,6 @@ class TaskStore:
 
     def get_by_id(self, task_id, owner):
         dynamodb = boto3.resource("dynamodb", endpoint_url=self.dynamodb_url)
-        dynamodb = boto3.resource("dynamodb")
         table = dynamodb.Table(self.table_name)
         record = table.get_item(
             Key={
@@ -54,7 +52,6 @@ class TaskStore:
 
     def _list_by_status(self, owner, status):
         dynamodb = boto3.resource("dynamodb", endpoint_url=self.dynamodb_url)
-        dynamodb = boto3.resource("dynamodb")
         table = dynamodb.Table(self.table_name)
         last_key = None
         query_kwargs = {

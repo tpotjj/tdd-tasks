@@ -46,6 +46,7 @@ def create_task(
     user_email: str = Depends(get_user_email),
     task_store: TaskStore = Depends(get_task_store),
 ):
+    # import pdb; pdb.set_trace()
     task = Task.create(id_=uuid.uuid4(), title=parameters.title, owner=user_email)
     task_store.add(task)
 
