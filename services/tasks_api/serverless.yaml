@@ -58,4 +58,5 @@ plugins:
   - serverless-python-requirements
 
 resources:
-  - ${file(resources/dynamodb.yaml)} 
+  - ${file(resources/cognito.yaml)}
+  - ${file(resources/dynamodb.yaml)}
