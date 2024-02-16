@@ -10,4 +10,11 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+  <script>
+    window.global = window;
+    window.process = {
+      env: { DEBUG: undefined },
+    }
+    var exports = {};
+  </script>
 </html>
