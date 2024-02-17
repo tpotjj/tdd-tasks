@@ -23,7 +23,7 @@ Resources:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket:
-        Fn::ImportValue: tasks-ui-dev
+        Fn::ImportValue: s3-tasks-ui-dev-name
       PolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -34,7 +34,7 @@ Resources:
             Resource:
               Fn::Join:
                 - '/'
-                - - Fn::ImportValue: arn:aws:s3:::tasks-ui-dev
+                - - Fn::ImportValue: s3-tasks-ui-dev-arn
                   - '*'
   APICachePolicy:
     Type: AWS::CloudFront::CachePolicy
@@ -81,7 +81,7 @@ Resources:
           - DomainName:
               Fn::Join:
                 - '.'
-                - - Fn::ImportValue: tasks-ui-dev
+                - - Fn::ImportValue: s3-tasks-ui-dev-name
                   - 's3.amazonaws.com'
             Id: vueApp
             S3OriginConfig:
