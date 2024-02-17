@@ -23,7 +23,7 @@ Resources:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket:
-        Fn::ImportValue: s3-development-tasks-api-name
+        Fn::ImportValue: tasks-ui-dev
       PolicyDocument:
         Version: "2012-10-17"
         Statement:
