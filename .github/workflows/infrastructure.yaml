@@ -22,6 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Apply changes
-        run:  aws cloudformation deploy --template-file cf_tasks.yaml --stack-name ${APP_ENVIRONMENT}-tasks --parameter-overrides Domain=${APP_DOMAIN}
-      - name: Debug
-        run: aws cloudformation describe-stack-events --stack-name ${APP_ENVIRONMENT}-tasks
+        run:  |
+          aws cloudformation deploy --template-file cf_tasks.yaml --stack-name ${APP_ENVIRONMENT}-tasks --parameter-overrides Domain=${APP_DOMAIN}
+          aws cloudformation describe-stack-events --stack-name ${APP_ENVIRONMENT}-tasks
