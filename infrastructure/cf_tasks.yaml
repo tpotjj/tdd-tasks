@@ -91,7 +91,7 @@ Resources:
                       -
                         - 'origin-access-identity/cloudfront/'
                         - Ref: CloudFrontOriginAccessIdentity
-          - DomainName: https://d0vg21wbyb.execute-api.us-east-1.amazonaws.com
+          - DomainName: d0vg21wbyb.execute-api.us-east-1.amazonaws.com
             Id: api
             OriginPath: /dev
             CustomOriginConfig:
